@@ -1,3 +1,4 @@
+from fileinput import close
 import sys, json, requests
 
 
@@ -44,7 +45,7 @@ def data_handling(data):
             newList.write(request_handling(url))
         else:
             pass
-
+    newList.close()
     print("Done")
     # returns url_list for testing
     return url_list
